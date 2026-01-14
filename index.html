@@ -12,7 +12,7 @@
   <!-- GOOGLE VERIFICATION -->
   <meta name="google-site-verification" content="8hzBI_dJ2HmVE7GR6Nlvj3XSEGSZYwnInOxgthHErBc" />
 
-  <!-- FAQ SCHEMA (SYNCED) -->
+  <!-- FAQ SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,7 +23,7 @@
         "name": "Is EasyTinda free?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "EasyTinda is currently free during early access. Future versions may include optional premium features."
+          "text": "EasyTinda is currently free during early access."
         }
       },
       {
@@ -31,7 +31,7 @@
         "name": "Does EasyTinda work offline?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. EasyTinda works offline for daily sales transactions. Internet is only needed for updates."
+          "text": "Yes. EasyTinda works offline for daily sales transactions."
         }
       },
       {
@@ -39,30 +39,13 @@
         "name": "What type of business can use EasyTinda?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "EasyTinda is ideal for sari-sari stores, mini marts, food stalls, and small retail businesses."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What Android version is supported?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "EasyTinda supports Android 8.0 and above."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is my sales data safe?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Sales data is stored locally on your device. Backup options will be available in future updates."
+          "text": "Ideal for sari-sari stores and small retailers."
         }
       }
     ]
   }
   </script>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -88,30 +71,13 @@
     <h2>App Screenshots</h2>
 
     <div class="hosting-gallery">
-      <img src="images/mura-hosting/1.jpg" loading="lazy" alt="EasyTinda POS Login Screen">
-      <img src="images/mura-hosting/2.jpg" loading="lazy" alt="EasyTinda Payment Screen">
-      <img src="images/mura-hosting/3.jpg" loading="lazy" alt="EasyTinda Inventory Screen">
-      <img src="images/mura-hosting/4.jpg" loading="lazy" alt="EasyTinda Customer Credit">
-      <img src="images/mura-hosting/5.jpg" loading="lazy" alt="EasyTinda Reports Screen">
-      <img src="images/mura-hosting/6.jpg" loading="lazy" alt="EasyTinda Product List">
+      <img src="images/mura-hosting/1.jpg" alt="EasyTinda Login">
+      <img src="images/mura-hosting/2.jpg" alt="Payment Screen">
+      <img src="images/mura-hosting/3.jpg" alt="Inventory Screen">
+      <img src="images/mura-hosting/4.jpg" alt="Customer Credit">
+      <img src="images/mura-hosting/5.jpg" alt="Reports Screen">
+      <img src="images/mura-hosting/6.jpg" alt="Product List">
     </div>
-  </section>
-
-  <section class="card">
-    <h2>Key Features</h2>
-    <ul>
-      <li>✔ Fast & smooth sales transactions</li>
-      <li>✔ Product & price management</li>
-      <li>✔ Daily sales summary</li>
-      <li>✔ Offline-first design</li>
-      <li>✔ Android optimized</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Download</h2>
-    <p>Latest Version: <strong>Coming Soon</strong></p>
-    <a href="#" class="download-btn">Download APK (Soon)</a>
   </section>
 
   <section class="card faq">
@@ -119,27 +85,12 @@
 
     <details>
       <summary>Is EasyTinda free?</summary>
-      <p>EasyTinda is free during early access. Premium features may be added later.</p>
+      <p>Yes, during early access.</p>
     </details>
 
     <details>
-      <summary>Does EasyTinda work offline?</summary>
-      <p>Yes. You can record sales even without internet connection.</p>
-    </details>
-
-    <details>
-      <summary>What businesses can use EasyTinda?</summary>
-      <p>Perfect for sari-sari stores, mini marts, food stalls, and small retailers.</p>
-    </details>
-
-    <details>
-      <summary>What Android version is supported?</summary>
-      <p>Android 8.0 and above.</p>
-    </details>
-
-    <details>
-      <summary>Is my data safe?</summary>
-      <p>Yes. All data is stored locally on your device.</p>
+      <summary>Does it work offline?</summary>
+      <p>Yes, internet is not required for daily use.</p>
     </details>
   </section>
 
@@ -148,6 +99,38 @@
 <footer>
   <p>© 2026 PS Path Lab. All rights reserved.</p>
 </footer>
+
+<!-- SIMPLE LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close">✕</span>
+  <img id="lightbox-img">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("lightbox-close");
+
+  document.querySelectorAll(".hosting-gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    document.body.style.overflow = "";
+  });
+
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  });
+</script>
 
 </body>
 </html>
