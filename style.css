@@ -74,5 +74,35 @@ footer {
   color: #555;
   line-height: 1.6;
 }
+.faq details {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 12px 0;
+}
+
+.faq summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 20px;
+}
+
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+}
+
+.faq details[open] summary::after {
+  content: "–";
+}
+
+.faq details p {
+  margin-top: 8px;
+  color: #555;
+  line-height: 1.6;
+}
+
 
 
