@@ -123,8 +123,13 @@
 <!-- LIGHTBOX HTML -->
 <div id="lightbox" class="lightbox">
   <span class="lightbox-close">&times;</span>
-  <img id="lightbox-img">
+
+  <div class="lightbox-content">
+    <img id="lightbox-img" class="lightbox-img">
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </div>
 </div>
+
 
 <!-- LIGHTBOX SCRIPT (SAFE PLACE) -->
 <script>
@@ -207,4 +212,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
+
 
