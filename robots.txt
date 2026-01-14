@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pathrib.github.io/pspathlab/sitemap.xml
