@@ -120,18 +120,17 @@
   <p>© 2026 PS Path Lab. All rights reserved.</p>
 </footer>
 
-<!-- LIGHTBOX HTML -->
-<div id="lightbox" class="lightbox">
-  <span class="lightbox-close">&times;</span>
+<!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <span class="lightbox-close" aria-label="Close">&times;</span>
 
   <div class="lightbox-content">
-    <img id="lightbox-img" class="lightbox-img">
+    <img id="lightbox-img" class="lightbox-img" alt="">
     <p id="lightbox-caption" class="lightbox-caption"></p>
   </div>
 </div>
 
-
-<!-- LIGHTBOX SCRIPT (SAFE PLACE) -->
+<!-- LIGHTBOX SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -142,75 +141,63 @@ document.addEventListener("DOMContentLoaded", function () {
   const images = Array.from(document.querySelectorAll(".lightbox-trigger"));
 
   let currentIndex = 0;
-  let touchStartX = 0;
-  let touchEndX = 0;
-  let touchStartY = 0;
-  let touchEndY = 0;
+  let startX = 0;
+  let startY = 0;
 
-  function showImage(index) {
-    if (index < 0) index = images.length - 1;
-    if (index >= images.length) index = 0;
+  function openLightbox(index) {
     currentIndex = index;
+    updateImage();
+    lightbox.style.display = "flex";
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
 
+  function closeLightbox() {
+    lightbox.style.display = "none";
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function updateImage() {
     lightboxImg.src = images[currentIndex].src;
     caption.textContent = images[currentIndex].alt || "";
   }
 
-  // OPEN
   images.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      showImage(index);
-      lightbox.style.display = "flex";
-    });
+    img.addEventListener("click", () => openLightbox(index));
   });
 
-  // CLOSE
-  closeBtn.addEventListener("click", () => {
-    lightbox.style.display = "none";
+  closeBtn.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) closeLightbox();
   });
 
-  lightbox.addEventListener("click", (e) => {
-    if (e.target === lightbox) {
-      lightbox.style.display = "none";
-    }
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeLightbox();
   });
 
-  // TOUCH START
-  lightboxImg.addEventListener("touchstart", (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    touchStartY = e.changedTouches[0].screenY;
+  lightboxImg.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
   }, { passive: true });
 
-  // TOUCH END
-  lightboxImg.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    touchEndY = e.changedTouches[0].screenY;
-    handleGesture();
+  lightboxImg.addEventListener("touchend", e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) {
+      currentIndex = dx < 0
+        ? (currentIndex + 1) % images.length
+        : (currentIndex - 1 + images.length) % images.length;
+      updateImage();
+    }
+
+    if (dy > 100) closeLightbox();
   });
-
-  function handleGesture() {
-    const diffX = touchEndX - touchStartX;
-    const diffY = touchEndY - touchStartY;
-
-    // LEFT / RIGHT
-    if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-      if (diffX < 0) {
-        showImage(currentIndex + 1);
-      } else {
-        showImage(currentIndex - 1);
-      }
-    }
-
-    // DOWN TO CLOSE
-    if (diffY > 80) {
-      lightbox.style.display = "none";
-    }
-  }
 
 });
 </script>
+
 </body>
 </html>
-
-
-
