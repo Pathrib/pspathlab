@@ -142,5 +142,9 @@ footer {
   cursor: pointer;
   font-weight: bold;
 }
+.lightbox-img {
+  touch-action: pan-y;
+  cursor: grab;
+}
 
 
