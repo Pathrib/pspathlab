@@ -12,7 +12,7 @@
   <!-- GOOGLE VERIFICATION -->
   <meta name="google-site-verification" content="8hzBI_dJ2HmVE7GR6Nlvj3XSEGSZYwnInOxgthHErBc" />
 
-  <!-- FAQ SCHEMA -->
+  <!-- FAQ SCHEMA (SYNCED) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -23,7 +23,7 @@
         "name": "Is EasyTinda free?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "EasyTinda is currently free during early access."
+          "text": "EasyTinda is currently free during early access. Future versions may include optional premium features."
         }
       },
       {
@@ -31,7 +31,7 @@
         "name": "Does EasyTinda work offline?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. EasyTinda works offline for daily sales transactions."
+          "text": "Yes. EasyTinda works offline for daily sales transactions. Internet is only needed for updates."
         }
       },
       {
@@ -39,7 +39,7 @@
         "name": "What type of business can use EasyTinda?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ideal for sari-sari stores, mini marts, and small retailers."
+          "text": "EasyTinda is ideal for sari-sari stores, mini marts, food stalls, and small retail businesses."
         }
       },
       {
@@ -47,7 +47,15 @@
         "name": "What Android version is supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Android 8.0 and above."
+          "text": "EasyTinda supports Android 8.0 and above."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my sales data safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sales data is stored locally on your device. Backup options will be available in future updates."
         }
       }
     ]
@@ -80,19 +88,19 @@
     <h2>App Screenshots</h2>
 
     <div class="hosting-gallery">
-      <img src="images/mura-hosting/1.jpg" class="lightbox-trigger" alt="EasyTinda POS Login">
-      <img src="images/mura-hosting/2.jpg" class="lightbox-trigger" alt="EasyTinda Payment">
-      <img src="images/mura-hosting/3.jpg" class="lightbox-trigger" alt="EasyTinda Inventory">
-      <img src="images/mura-hosting/4.jpg" class="lightbox-trigger" alt="EasyTinda Customer Credit">
-      <img src="images/mura-hosting/5.jpg" class="lightbox-trigger" alt="EasyTinda Reports">
-      <img src="images/mura-hosting/6.jpg" class="lightbox-trigger" alt="EasyTinda Product List">
+      <img src="images/mura-hosting/1.jpg" loading="lazy" alt="EasyTinda POS Login Screen">
+      <img src="images/mura-hosting/2.jpg" loading="lazy" alt="EasyTinda Payment Screen">
+      <img src="images/mura-hosting/3.jpg" loading="lazy" alt="EasyTinda Inventory Screen">
+      <img src="images/mura-hosting/4.jpg" loading="lazy" alt="EasyTinda Customer Credit">
+      <img src="images/mura-hosting/5.jpg" loading="lazy" alt="EasyTinda Reports Screen">
+      <img src="images/mura-hosting/6.jpg" loading="lazy" alt="EasyTinda Product List">
     </div>
   </section>
 
   <section class="card">
     <h2>Key Features</h2>
     <ul>
-      <li>✔ Fast sales transactions</li>
+      <li>✔ Fast & smooth sales transactions</li>
       <li>✔ Product & price management</li>
       <li>✔ Daily sales summary</li>
       <li>✔ Offline-first design</li>
@@ -100,17 +108,38 @@
     </ul>
   </section>
 
+  <section class="card">
+    <h2>Download</h2>
+    <p>Latest Version: <strong>Coming Soon</strong></p>
+    <a href="#" class="download-btn">Download APK (Soon)</a>
+  </section>
+
   <section class="card faq">
     <h2>Frequently Asked Questions</h2>
 
     <details>
       <summary>Is EasyTinda free?</summary>
-      <p>Yes, during early access.</p>
+      <p>EasyTinda is free during early access. Premium features may be added later.</p>
     </details>
 
     <details>
-      <summary>Does it work offline?</summary>
-      <p>Yes, internet is not required for daily use.</p>
+      <summary>Does EasyTinda work offline?</summary>
+      <p>Yes. You can record sales even without internet connection.</p>
+    </details>
+
+    <details>
+      <summary>What businesses can use EasyTinda?</summary>
+      <p>Perfect for sari-sari stores, mini marts, food stalls, and small retailers.</p>
+    </details>
+
+    <details>
+      <summary>What Android version is supported?</summary>
+      <p>Android 8.0 and above.</p>
+    </details>
+
+    <details>
+      <summary>Is my data safe?</summary>
+      <p>Yes. All data is stored locally on your device.</p>
     </details>
   </section>
 
@@ -119,85 +148,6 @@
 <footer>
   <p>© 2026 PS Path Lab. All rights reserved.</p>
 </footer>
-
-<!-- LIGHTBOX -->
-<div id="lightbox" class="lightbox" aria-hidden="true">
-  <span class="lightbox-close" aria-label="Close">&times;</span>
-
-  <div class="lightbox-content">
-    <img id="lightbox-img" class="lightbox-img" alt="">
-    <p id="lightbox-caption" class="lightbox-caption"></p>
-  </div>
-</div>
-
-<!-- LIGHTBOX SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const caption = document.getElementById("lightbox-caption");
-  const closeBtn = document.querySelector(".lightbox-close");
-  const images = Array.from(document.querySelectorAll(".lightbox-trigger"));
-
-  let currentIndex = 0;
-  let startX = 0;
-  let startY = 0;
-
-  function openLightbox(index) {
-    currentIndex = index;
-    updateImage();
-    lightbox.style.display = "flex";
-    lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    lightbox.style.display = "none";
-    lightbox.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
-
-  function updateImage() {
-    lightboxImg.src = images[currentIndex].src;
-    caption.textContent = images[currentIndex].alt || "";
-  }
-
-  images.forEach((img, index) => {
-    img.addEventListener("click", () => openLightbox(index));
-  });
-
-  closeBtn.addEventListener("click", closeLightbox);
-
-  lightbox.addEventListener("click", e => {
-    if (e.target === lightbox) closeLightbox();
-  });
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") closeLightbox();
-  });
-
-  lightboxImg.addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
-  }, { passive: true });
-
-  lightboxImg.addEventListener("touchend", e => {
-    const dx = e.changedTouches[0].clientX - startX;
-    const dy = e.changedTouches[0].clientY - startY;
-
-    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)) {
-      currentIndex = dx < 0
-        ? (currentIndex + 1) % images.length
-        : (currentIndex - 1 + images.length) % images.length;
-      updateImage();
-    }
-
-    if (dy > 100) closeLightbox();
-  });
-
-});
-</script>
 
 </body>
 </html>
