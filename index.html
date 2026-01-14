@@ -137,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
+  const caption = document.getElementById("lightbox-caption");
   const closeBtn = document.querySelector(".lightbox-close");
   const images = Array.from(document.querySelectorAll(".lightbox-trigger"));
 
@@ -150,24 +151,24 @@ document.addEventListener("DOMContentLoaded", function () {
     if (index < 0) index = images.length - 1;
     if (index >= images.length) index = 0;
     currentIndex = index;
+
     lightboxImg.src = images[currentIndex].src;
+    caption.textContent = images[currentIndex].alt || "";
   }
 
-  // OPEN LIGHTBOX
+  // OPEN
   images.forEach((img, index) => {
     img.addEventListener("click", () => {
-      currentIndex = index;
-      showImage(currentIndex);
+      showImage(index);
       lightbox.style.display = "flex";
     });
   });
 
-  // CLOSE BUTTON
+  // CLOSE
   closeBtn.addEventListener("click", () => {
     lightbox.style.display = "none";
   });
 
-  // CLICK BACKGROUND TO CLOSE
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) {
       lightbox.style.display = "none";
@@ -191,16 +192,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const diffX = touchEndX - touchStartX;
     const diffY = touchEndY - touchStartY;
 
-    // SWIPE LEFT / RIGHT
+    // LEFT / RIGHT
     if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
       if (diffX < 0) {
-        showImage(currentIndex + 1); // swipe left
+        showImage(currentIndex + 1);
       } else {
-        showImage(currentIndex - 1); // swipe right
+        showImage(currentIndex - 1);
       }
     }
 
-    // SWIPE DOWN TO CLOSE
+    // DOWN TO CLOSE
     if (diffY > 80) {
       lightbox.style.display = "none";
     }
@@ -208,9 +209,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
-
-
 </body>
 </html>
+
 
 
