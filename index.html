@@ -65,6 +65,12 @@
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+  <!-- LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img">
+</div>
+
 
 <body>
 
@@ -88,13 +94,14 @@
     <h2>App Screenshots</h2>
 
     <div class="hosting-gallery">
-      <img src="images/mura-hosting/1.jpg" loading="lazy" alt="EasyTinda POS Login Screen">
-      <img src="images/mura-hosting/2.jpg" loading="lazy" alt="EasyTinda Payment Screen">
-      <img src="images/mura-hosting/3.jpg" loading="lazy" alt="EasyTinda Inventory Screen">
-      <img src="images/mura-hosting/4.jpg" loading="lazy" alt="EasyTinda Customer Credit">
-      <img src="images/mura-hosting/5.jpg" loading="lazy" alt="EasyTinda Reports Screen">
-      <img src="images/mura-hosting/6.jpg" loading="lazy" alt="EasyTinda Product List">
-    </div>
+  <img src="images/mura-hosting/1.jpg" class="lightbox-trigger" alt="EasyTinda POS Login">
+  <img src="images/mura-hosting/2.jpg" class="lightbox-trigger" alt="EasyTinda Payment">
+  <img src="images/mura-hosting/3.jpg" class="lightbox-trigger" alt="EasyTinda Inventory">
+  <img src="images/mura-hosting/4.jpg" class="lightbox-trigger" alt="EasyTinda Customer Credit">
+  <img src="images/mura-hosting/5.jpg" class="lightbox-trigger" alt="EasyTinda Reports">
+  <img src="images/mura-hosting/6.jpg" class="lightbox-trigger" alt="EasyTinda Product List">
+  </div>
+
   </section>
 
   <section class="card">
@@ -151,3 +158,4 @@
 
 </body>
 </html>
+
