@@ -103,6 +103,23 @@ footer {
   color: #555;
   line-height: 1.6;
 }
+.hosting-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.hosting-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.hosting-gallery img:hover {
+  transform: scale(1.05);
+}
+
 
 
 
