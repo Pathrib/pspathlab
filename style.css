@@ -373,6 +373,19 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+.video-btn {
+  background: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+.video-btn:hover {
+  background: #45a049;
+}
+
 
 
 
