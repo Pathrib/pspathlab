@@ -385,6 +385,31 @@ footer a:hover {
 .video-btn:hover {
   background: #45a049;
 }
+.helper-text {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.video-btn {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.video-btn:hover {
+  background: linear-gradient(135deg, #66BB6A, #388E3C);
+  transform: scale(1.05);
+}
+
 
 
 
