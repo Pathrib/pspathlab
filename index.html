@@ -8,9 +8,16 @@
   <!-- SEO -->
   <title>Android POS System | EasyTinda – PS Path Lab</title>
   <meta name="description" content="EasyTinda is an offline Android POS system, designed for sari-sari stores and small businesses in the Philippines.">
+  <meta name="keywords" content="POS, Android POS, EasyTinda, sari-sari store, small business">
 
   <!-- GOOGLE VERIFICATION -->
   <meta name="google-site-verification" content="8hzBI_dJ2HmVE7GR6Nlvj3XSEGSZYwnInOxgthHErBc" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="EasyTinda POS – Android POS System">
+  <meta property="og:description" content="Simple, fast & reliable Android POS system for small businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/mura-hosting/1.jpg">
 
   <!-- FAQ SCHEMA -->
   <script type="application/ld+json">
@@ -51,6 +58,14 @@
 
 <body>
 
+<!-- Sticky Navigation -->
+<nav class="navbar">
+  <a href="#about">About</a>
+  <a href="#screenshots">Screenshots</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 <header>
   <img src="logo.png" alt="PS Path Lab Logo" class="logo">
   <h1>EasyTinda POS – Android POS System</h1>
@@ -58,96 +73,89 @@
 </header>
 
 <main>
-    <section class="card">
+  <section id="about" class="card">
     <h2>About the App</h2>
     <p>
       EasyTinda POS is a lightweight Android POS system built for small businesses.
       It helps manage sales, products, and daily transactions efficiently — even offline.
     </p>
+    <p><span class="badge">Status: Early Access</span></p>
   </section>
   
-  <section class="card">
+  <section id="screenshots" class="card">
     <h2>App Screenshots</h2>
-
     <div class="hosting-gallery">
-      <img src="images/mura-hosting/1.jpg" alt="EasyTinda Login">
-      <img src="images/mura-hosting/2.jpg" alt="Payment Screen">
-      <img src="images/mura-hosting/3.jpg" alt="Inventory Screen">
-      <img src="images/mura-hosting/4.jpg" alt="Customer Credit">
-      <img src="images/mura-hosting/5.jpg" alt="Reports Screen">
-      <img src="images/mura-hosting/6.jpg" alt="Product List">
+      <img src="images/mura-hosting/1.jpg" alt="EasyTinda Login" loading="lazy">
+      <img src="images/mura-hosting/2.jpg" alt="Payment Screen" loading="lazy">
+      <img src="images/mura-hosting/3.jpg" alt="Inventory Screen" loading="lazy">
+      <img src="images/mura-hosting/4.jpg" alt="Customer Credit" loading="lazy">
+      <img src="images/mura-hosting/5.jpg" alt="Reports Screen" loading="lazy">
+      <img src="images/mura-hosting/6.jpg" alt="Product List" loading="lazy">
     </div>
   </section>
-  <section class="distribution-section">
-  <p>
-    <strong>EasyTinda POS</strong> is distributed via
-    <a
-      href="https://play.google.com/store"
-      target="_blank"
-      rel="noopener"
-    >
-      Google Play Store
-    </a>.
-    <br>
-    Enterprise deployments are available through private distribution by
-    <strong>PS Path Lab</strong>.
-  </p>
 
-  <p class="processing-note">
-    The Android app is currently under processing.
-    Download will be available soon.
-  </p>
-
-  <button class="download-btn disabled" disabled>
-    Get it on Google Play
-  </button>
-</section>
-
-
+  <section class="distribution-section card">
+    <p>
+      <strong>EasyTinda POS</strong> is distributed via
+      <a href="https://play.google.com/store" target="_blank" rel="noopener">
+        Google Play Store
+      </a>.
+      <br>
+      Enterprise deployments are available through private distribution by
+      <strong>PS Path Lab</strong>.
+    </p>
+    <p class="processing-note">
+      The Android app is currently under processing.
+      Download will be available soon.
+    </p>
+    <button class="download-btn disabled" disabled aria-label="Download disabled">
+      Get it on Google Play
+    </button>
   </section>
 
-  <section class="card faq">
+  <section id="faq" class="card faq">
     <h2>Frequently Asked Questions</h2>
-
     <details>
       <summary>Is EasyTinda free?</summary>
       <p>EasyTinda is free during early access. Premium features may be added later.</p>
     </details>
-
     <details>
       <summary>Does EasyTinda work offline?</summary>
       <p>Yes. You can record sales even without internet connection.</p>
     </details>
-
     <details>
       <summary>What businesses can use EasyTinda?</summary>
       <p>Perfect for sari-sari stores, mini marts, food stalls, and small retailers.</p>
     </details>
-
     <details>
       <summary>What Android version is supported?</summary>
       <p>Android 8.0 and above.</p>
     </details>
-
     <details>
       <summary>Is my data safe?</summary>
       <p>Yes. All data is stored locally on your device.</p>
     </details>
   </section>
+
+  <section id="contact" class="card">
+    <h2>Contact & Support</h2>
+    <p>For feedback or issues, open a <a href="https://github.com/yourrepo/issues">GitHub Issue</a>.</p>
+    <p>Or email us at <a href="mailto:support@easytinda.com">support@easytinda.com</a>.</p>
+  </section>
+
+  <!-- Floating FB Button -->
   <a href="https://www.facebook.com/pspathlab.ph" 
-   class="fb-float"
-   target="_blank"
-   aria-label="Contact us on Facebook">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
-        alt="Facebook"
-   >
-</a>
-
-
+     class="fb-float"
+     target="_blank"
+     aria-label="Contact us on Facebook">
+     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+          alt="Facebook">
+  </a>
 </main>
 
 <footer>
   <p>© 2026 PS Path Lab. All rights reserved.</p>
+  <p><a href="CHANGELOG.md">Changelog</a> | <a href="ROADMAP.md">Roadmap</a> | <a href="SECURITY.md">Security</a></p>
 </footer>
 
 <!-- SIMPLE LIGHTBOX -->
@@ -184,11 +192,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
