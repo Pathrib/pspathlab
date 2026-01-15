@@ -216,5 +216,15 @@
 
 </body>
 </html>
+<script>
+  const btn = document.getElementById("show-video-btn");
+  const container = document.getElementById("video-container");
+
+  btn.addEventListener("click", () => {
+    container.style.display = "block";
+    btn.style.display = "none"; // hide button after click
+  });
+</script>
+
 
 
