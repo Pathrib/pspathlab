@@ -391,7 +391,6 @@ footer a:hover {
   margin-bottom: 10px;
   text-align: center;
 }
-
 .video-btn {
   background: linear-gradient(135deg, #4CAF50, #2E7D32);
   color: #fff;
@@ -404,11 +403,17 @@ footer a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: background 0.3s ease, transform 0.2s ease;
 }
-
 .video-btn:hover {
   background: linear-gradient(135deg, #66BB6A, #388E3C);
   transform: scale(1.05);
 }
+.trial-text {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+
+
 
 
 
