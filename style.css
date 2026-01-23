@@ -15,6 +15,11 @@ header {
   padding: 30px 15px;
   border-bottom: 1px solid #ddd;
 }
+.trial-text {
+  background: #e8f5e9;
+  padding: 10px;
+  border-radius: 6px;
+}
 
 .logo {
   width: 90px;
@@ -412,6 +417,7 @@ footer a:hover {
   font-size: 0.95rem;
   color: #2e7d32;
 }
+
 
 
 
