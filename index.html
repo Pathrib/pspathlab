@@ -145,23 +145,41 @@
   </section>
 
   <section class="distribution-section card">
-    <p>
-      <strong>EasyTinda POS</strong> is distributed via
-      <a href="https://play.google.com/store" target="_blank" rel="noopener">
-        Google Play Store
-      </a>.
-      <br>
-      Enterprise deployments are available through private distribution by
-      <strong>PS Path Lab</strong>.
-    </p>
-    <p class="processing-note">
-      The Android app is currently under processing.
-      Download will be available soon.
-    </p>
-    <button class="download-btn disabled" disabled aria-label="Download disabled">
-      Get it on Google Play
-    </button>
-  </section>
+  <p>
+    <strong>EasyTinda POS</strong> distribution options:
+  </p>
+
+  <ul class="distribution-list">
+    <li>
+      <strong>Google Play Store</strong><br>
+      Public release is currently under review.
+    </li>
+    <li>
+      <strong>Enterprise / Direct Install</strong><br>
+      Available now for early access and testing.
+    </li>
+  </ul>
+
+  <!-- Google Play (disabled) -->
+  <button class="download-btn disabled" disabled aria-label="Google Play pending">
+    Get it on Google Play (Coming Soon)
+  </button>
+
+  <!-- Enterprise APK Download -->
+  <a href="https://drive.google.com/uc?export=download&id=1qTO3aj72C5LmHPZz6iQ7ocxY2ExGrl9d"
+     class="download-btn apk-btn"
+     target="_blank"
+     rel="noopener"
+     aria-label="Download EasyTinda POS Enterprise APK">
+     ⬇ Download Enterprise APK
+  </a>
+
+  <p class="helper-text">
+    For enterprise use and early access only.
+    Enable <em>“Install unknown apps”</em> on your Android device.
+  </p>
+</section>
+
 
   <section id="faq" class="card faq">
     <h2>Frequently Asked Questions</h2>
@@ -251,6 +269,7 @@
     btn.style.display = "none";
   });
 </script>
+
 
 
 
