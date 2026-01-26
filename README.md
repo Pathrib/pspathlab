@@ -47,7 +47,7 @@ Enterprise deployments are handled by **PS Path Lab**.
 ## 📬 Contact & Support
 
 - Facebook: [PS Path Lab](https://www.facebook.com/pspathlab.ph)
-- Email: [support@easytinda.com](mailto:support@easytinda.com)
+- Email: [pspathlab.ph@gmail.com](pspathlab.ph@gmail.com)
 - Issues: [GitHub Issues](https://github.com/yourrepo/issues)
 
 ---
